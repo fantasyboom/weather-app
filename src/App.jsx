@@ -6,6 +6,7 @@ import FiveDayCard from './components/fiveDayCard';
 import axios from 'axios';
 import ToggleButton from './components/toggleButton';
 
+
 function App() {
   const [searchInput, setSearchInput] = useState('');
   const [coordinates, setCoordinates] = useState({ lat: null, lon: null });
@@ -13,8 +14,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [temperatureUnit, setTemperatureUnit] = useState("C");
-  const apiKey = process.env.REACT_APP_RAPIDAPI_KEY;
-  const apiHost = process.env.REACT_APP_RAPIDAPI_HOST;
+  const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
+  const rapidApiHost = import.meta.env.VITE_RAPID_API_HOST;
+
+  
 
   const handleSearch = async (input) => {
     setSearchInput(input);
@@ -24,8 +27,8 @@ function App() {
       method: 'GET',
       url: `https://open-weather13.p.rapidapi.com/city/${input}`,
       headers: {
-        'X-RapidAPI-Key': apiKey,
-        'X-RapidAPI-Host': apiHost,
+        'X-RapidAPI-Key': rapidApiKey,
+        'X-RapidAPI-Host': rapidApiHost,
       },
     };
 
@@ -49,8 +52,8 @@ function App() {
           method: 'GET',
           url: `https://open-weather13.p.rapidapi.com/city/fivedaysforcast/${coordinates.lat}/${coordinates.lon}`,
           headers: {
-            'X-RapidAPI-Key': apiKey,
-            'X-RapidAPI-Host': apiHost,
+            'X-RapidAPI-Key': rapidApiKey,
+            'X-RapidAPI-Host': rapidApiHost,
           }
         };
 
