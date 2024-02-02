@@ -33,7 +33,7 @@ The Weather App is built using React and utilizes the OpenWeather API to fetch w
 git clone https://github.com/your-username/weather-app.git
 cd weather-app
 
-2. Install the Dependencies
+2. Install the Dependencies:
 npm install
 # or
 yarn
@@ -59,3 +59,5 @@ Folder Structure:
     TempDisplay.jsx
   App.jsx
   App.css
+
+## Deployed Link : https://weather-app-mirrar.vercel.app/
