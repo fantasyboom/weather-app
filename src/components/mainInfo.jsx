@@ -36,6 +36,8 @@ const getWeatherIcon = (condition, size = '10x') => {
     const [error, setError] = useState(null);
    
     const [weatherCondition, setWeatherCondition] = useState('unknown'); // Declare weatherCondition state
+    const apiKey = process.env.REACT_APP_RAPIDAPI_KEY;
+    const apiHost = process.env.REACT_APP_RAPIDAPI_HOST;
   
     useEffect(() => {
       const fetchData = async () => {
@@ -45,8 +47,8 @@ const getWeatherIcon = (condition, size = '10x') => {
           method: "GET",
           url: `https://open-weather13.p.rapidapi.com/city/${searchInput}`,
           headers: {
-            'X-RapidAPI-Key': 'b00be727abmsh0c7b04ddde67e86p1c2612jsn31ed43ee08a2',
-            'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
+            'X-RapidAPI-Key': apiKey,
+            'X-RapidAPI-Host': apiHost
           },
           params: {
             unit: temperatureUnit === "C" ? "metric" : "imperial"
