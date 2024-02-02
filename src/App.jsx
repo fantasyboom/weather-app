@@ -60,7 +60,7 @@ function App() {
         try {
           const response = await axios.request(options);
           setFiveDayForecast(response.data);
-          console.log(response.data)
+          
         } catch (error) {
           console.error(error);
           setError("An error occurred while fetching the 5-day forecast.");
