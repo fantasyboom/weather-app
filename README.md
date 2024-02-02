@@ -1,63 +1,51 @@
-# Weather App
+<h1 align="center" id="title">Weather App</h1>
 
-This project is a weather application that provides current weather information and a 5-day forecast for a given city.
+<p id="description">This project is a weather application that provides current weather information and a 5-day forecast for a given city.</p>
 
-## Table of Contents
+  
+  
+<h2>🧐 Features</h2>
 
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Environment Variables](#environment-variables)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
+Here're some of the project's best features:
 
-## Overview
+*   Current weather display with temperature min/max temperatures and weather description.
+*   Toggle between Celsius and Fahrenheit.
+*   5-day forecast with date temperature and weather description.
+*   Search for a city and get real-time weather information.
+*   Responsive design for various screen sizes.
 
-The Weather App is built using React and utilizes the OpenWeather API to fetch weather data. It includes a main information card for the current weather, additional information about the city, and a 5-day forecast.
+<h2>🛠️ Installation Steps:</h2>
 
-## Features
+<p>1. Clone the repository:</p>
 
-- Current weather display with temperature, min/max temperatures, and weather description.
-- Toggle between Celsius and Fahrenheit.
-- 5-day forecast with date, temperature, and weather description.
-- Search for a city and get real-time weather information.
-- Responsive design for various screen sizes.
+```
+git clone https://github.com/your-username/weather-app.git cd weather-app
+```
 
-## Installation
+<p>2. Install the Dependencies:</p>
 
-1. Clone the repository:
+```
+npm install 
+```
 
-```bash
-git clone https://github.com/your-username/weather-app.git
-cd weather-app
+<p>3. To run the application:</p>
 
-2. Install the Dependencies:
-npm install
-# or
-yarn
+```
+npm run dev 
+```
 
-3.To run the application
-npm run dev
-# or
-yarn dev
-Visit http://localhost:3000 in your browser.
+<p>4. .env file in our root folder</p>
 
-4. We are using open weather api, we need to have a .env file in our root folder
-REACT_APP_RAPIDAPI_KEY=your-api-key
-REACT_APP_RAPIDAPI_HOST=open-weather13.p.rapidapi.com
+```
+REACT_APP_RAPIDAPI_KEY=your-api-key   REACT_APP_RAPIDAPI_HOST=open-weather13.p.rapidapi.com
+```
 
-Folder Structure:
-/src
-  /components
-    MainInfoCard.jsx
-    AdditionalInfoCard.jsx
-    FiveDayCard.jsx
-    ToggleButton.jsx
-    SearchBar.jsx
-    TempDisplay.jsx
-  App.jsx
-  App.css
+  
+  
+<h2>💻 Built with</h2>
 
-## Deployed Link : https://weather-app-mirrar.vercel.app/
+Technologies used in the project:
+
+*   Tailwindcss
+*   Reactjs
+*   Axios
