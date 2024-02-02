@@ -6,6 +6,8 @@ import TemperatureDisplay from "./tempdisplay";
 export default function AdditionalInfoCard({ searchInput }) {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
+  const rapidApiKey = import.meta.env.VITE_RAPID_API_KEY;
+  const rapidApiHost = import.meta.env.VITE_RAPID_API_HOST;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,8 +21,8 @@ export default function AdditionalInfoCard({ searchInput }) {
         method: "GET",
         url: `https://open-weather13.p.rapidapi.com/city/${searchInput}`,
         headers: {
-          'X-RapidAPI-Key': apiKey,
-          'X-RapidAPI-Host': apiHost,
+          'X-RapidAPI-Key': rapidApiKey,
+          'X-RapidAPI-Host': rapidApiHost,
         }
       };
 
