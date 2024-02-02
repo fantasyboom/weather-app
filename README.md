@@ -2,7 +2,7 @@
 
 <p id="description">This project is a weather application that provides current weather information and a 5-day forecast for a given city.</p>
 
-  
+<p>Deployed link: https://weather-app-mirrar.vercel.app/</p>
   
 <h2>🧐 Features</h2>
 
