@@ -47,7 +47,7 @@ function App() {
       
         const options = {
           method: 'GET',
-          url: 'https://open-weather13.p.rapidapi.com/city/fivedaysforcast/18.5196/73.8553',
+          url: `https://open-weather13.p.rapidapi.com/city/fivedaysforcast/${coordinates.lat}/${coordinates.lon}`,
           headers: {
             'X-RapidAPI-Key': apiKey,
             'X-RapidAPI-Host': apiHost,
