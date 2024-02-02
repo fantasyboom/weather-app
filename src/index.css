@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.border-radiusImportant{
+    border-radius: 30px !important;
+  }
+
+  .weather-icon {
+    font-size: 3em; /* Adjust the size as needed */
+  }
+  
